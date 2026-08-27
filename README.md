@@ -29,7 +29,7 @@ Super Famicom game that came before it.
 | Maps | 1,315 of them, in a 131 MB archive addressed only from a table at `0x8019622C` |
 | Graphics | stock Sony **TIM**, with VRAM coordinates baked into every image |
 | Music | stock Sony **SEQ** (94 of them) driven by VAB banks that live inside the executable |
-| Voice | 194 MB of XA ADPCM, mono 18.9 kHz, on an **eight-channel interleave** |
+| Voice | 194 MB of XA ADPCM, **stereo 37.8 kHz**, on an eight-channel interleave that exactly fills a double-speed drive |
 | Script | **538,900 Shift-JIS strings** in 1,311 of the 1,315 map extents |
 | Video | six `.STR` files, 4,315 MDEC frames, **three different bitstream versions** |
 | Slack | 154 all-zero sectors in a 220,544-sector track — 0.07% |
@@ -56,6 +56,14 @@ See [11](docs/11-tales-lineage.md), and
 [tales-blockcodec-doc](https://github.com/vs-sr-dev/tales-blockcodec-doc) for
 the format on its own, with a decoder that handles both dialects.
 
+**And it did not stop here.** *Tales of Eternia* (2000) carries the same two
+decompressors, and the first 53 and 50 words of them are **identical to this
+disc's, byte for byte** — the whole ring-preload prologue, which has no address
+constants for a relocation to change. That build also fixes the stored path
+this one has wired wrong ([04](docs/04-block-codec.md)) and starts moving the
+compiled-in directory onto the disc. See [11](docs/11-tales-lineage.md) and
+[ps1-talesofeternia-doc](https://github.com/vs-sr-dev/ps1-talesofeternia-doc).
+
 Start at [docs/01-overview.md](docs/01-overview.md).
 
 ---
@@ -71,9 +79,9 @@ Start at [docs/01-overview.md](docs/01-overview.md).
 | [05 — Containers and the index](docs/05-containers-and-index.md) | The offset table, and the file system that lives in the executable |
 | [06 — Graphics](docs/06-graphics.md) | TIM everywhere, and a measured map of video memory |
 | [07 — Audio](docs/07-audio.md) | 94 SEQ, 18 VAB headers inside the executable, the XA interleave |
-| [08 — Movies](docs/08-movies.md) | Six STR files, three encoders, one that forgot its audio |
+| [08 — Movies](docs/08-movies.md) | Six STR files, three encoders, two frame rates, one that forgot its audio |
 | [09 — Text and the font](docs/09-text.md) | JIS X 0201, per-file glyph inventories, the technique kanji |
-| [10 — Leftovers](docs/10-leftovers.md) | `DEBUG.TXT`, a debug save, a profiler HUD, and a dead code path |
+| [10 — Leftovers](docs/10-leftovers.md) | `DEBUG.TXT`, a debug save, a profiler HUD, a dead code path, and the Windows shell's window title on 14,487 sectors |
 | [11 — The Tales lineage](docs/11-tales-lineage.md) | What 1997 kept from 1995, measured — the format itself lives in [tales-blockcodec-doc](https://github.com/vs-sr-dev/tales-blockcodec-doc) |
 | [99 — Open questions](docs/99-open-questions.md) | What is still unknown, and how to attack it |
 
@@ -115,6 +123,7 @@ python tools/script_scan.py  iso/SLPS_011.00 iso/DAT --map 900
 
 # archaeology
 python tools/leftovers.py    "$TOD" iso/ --filler
+python tools/leftovers.py    "$TOD" iso/ --xa-filler   # what is in the empty XA slots
 python tools/script_scan.py  iso/SLPS_011.00 iso/DAT --labels
 ```
 
@@ -136,15 +145,16 @@ Claims in these documents are labelled:
 | PS-EXE header and load map | Verified | header fields, entry chain disassembled |
 | Block codec, methods 1 and 3 | Verified | 6,638 / 6,638 blocks, exact length, no exceptions |
 | Method-1 dictionary | Verified | negative control: 25 structures vs 11 / 18 / 4 for wrong guesses |
-| Method 0 (stored) | Consistent | disassembled; never used by any block on the disc |
+| Method 0 (stored) | Verified | disassembled and mis-wired here; never used by any block on this disc, and correctly wired in the 2000 build |
 | Container, both variants | Verified | 5,983 containers walked, 44,512 raw members classified |
 | Extent tables in the executable | Verified | five tables cover their archives to the byte, 100% |
 | TIM as the only image format | Verified | 443 distinct VRAM rectangles, all self-describing |
 | VAB ↔ body pairing | Verified | 18 / 18 headers; `fsize − header` equals the body size exactly |
 | SEQ inventory | Verified | 94 / 94 parse, `pQES` v1, 48 ticks per quarter |
 | STR frame structure | Verified | 4,315 frames, none incomplete |
-| XA coding parameters | Verified | read from the subheader of every Form-2 sector |
+| XA coding parameters | Verified | read from the subheader of every Form-2 sector, and cross-checked against four movies' audio-to-video sector ratios |
 | Codec lineage to *Tales of Phantasia* | Verified | header, method numbering and escape constants compared |
+| Codec identity with *Tales of Eternia* | Verified | 53 and 50 words of the two decoders compared instruction by instruction |
 | `V.DAT` is SPU ADPCM | Verified | 19 extents decoded; roughness inside the known-good band, controls outside it |
 | The script's location and encoding | Verified | 1,315 extents walked, 538,900 strings recovered |
 | What each `V.DAT` waveform is | **Open** | format settled, contents not |
@@ -154,6 +164,17 @@ Claims in these documents are labelled:
 ## Licence
 
 Documentation: [CC BY 4.0](LICENSE-DOCS). Tools: [MIT](LICENSE).
+
+### Companion repositories
+
+* [tales-blockcodec-doc](https://github.com/vs-sr-dev/tales-blockcodec-doc) —
+  the block codec, documented once for every title that uses it
+* [snes-talesofphantasia-doc](https://github.com/vs-sr-dev/snes-talesofphantasia-doc)
+  — the 1995 Super Famicom and 2003 Game Boy Advance builds
+* [ps1-talesofeternia-doc](https://github.com/vs-sr-dev/ps1-talesofeternia-doc) — the 2000
+  PlayStation build, which shares this one's decompressor to the instruction
+
+---
 
 *Tales of Destiny* is a trademark of BANDAI NAMCO Entertainment. This project
 is unaffiliated with and unendorsed by Bandai Namco, Wolf Team or Sony

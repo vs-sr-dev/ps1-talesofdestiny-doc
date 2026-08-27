@@ -18,10 +18,17 @@ bytes of payload:
 
 An XA audio sector's parameters live in the CD-XA subheader's fourth byte:
 
-    bit 0-1  sample rate   0 = 37.8 kHz, 1 = 18.9 kHz
-    bit 2-3  bits/sample   0 = 4 bit, 1 = 8 bit
-    bit 4-5  channels      0 = mono, 1 = stereo
+    bit 0-1  channels      0 = mono, 1 = stereo
+    bit 2-3  sample rate   0 = 37.8 kHz, 1 = 18.9 kHz
+    bit 4-5  bits/sample   0 = 4 bit, 1 = 8 bit
     bit 6    emphasis
+
+(That is the CD-XA "coding information" byte as ECMA-130 / the Green Book
+define it.  An earlier copy of this file, inherited from another pipeline, had
+the three two-bit fields in the reverse order.  The disc settles it
+arithmetically: a coding byte of 0x01 read as stereo 37.8 kHz gives exactly one
+audio sector per 8 video sectors in OP.STR, which is what is on the disc; read
+as mono 18.9 kHz it would give four times as much audio as the movie is long.)
 
 Usage:
     python tools/str_probe.py TRACK.bin --str LBA COUNT
@@ -42,8 +49,8 @@ CHAN = {0: 'mono', 1: 'stereo'}
 
 
 def coding(b):
-    return '%s %s %s%s' % (CHAN.get((b >> 4) & 3, '?'), RATE.get(b & 3, '?'),
-                           BITS.get((b >> 2) & 3, '?'),
+    return '%s %s %s%s' % (CHAN.get(b & 3, '?'), RATE.get((b >> 2) & 3, '?'),
+                           BITS.get((b >> 4) & 3, '?'),
                            ', emphasis' if b & 0x40 else '')
 
 

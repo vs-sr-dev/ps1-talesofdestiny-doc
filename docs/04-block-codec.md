@@ -174,6 +174,26 @@ packer never emits it.
 `tools/tod_codec.py` copies from `+9` by default and will reproduce the game's
 actual behaviour with `unpack(..., faithful=True)`.
 
+### It was a bug in this build, not in the format
+
+*Tales of Eternia*, three years later, has the same dispatcher with one
+instruction changed:
+
+```
+80023930  addu  a0, s1, zero        ; destination
+80023934  jal   0x80076E7C          ; memcpy
+80023938  addiu a1, s0, 9           ; source = block + 9   <-- past the header
+```
+
+and it uses the path: **969 of its 21,054 blocks have method 0**, all of them
+16 to 28 bytes, all with `packed == unpacked`, which is the packer declining to
+spend a token stream on a payload that cannot shrink.
+
+So the discrepancy documented above is specific to this 1997 build. The Super
+Famicom stored path works, the 2000 PlayStation stored path works, and the one
+in between was wired wrong and never noticed because nothing on the disc used
+it. See [ps1-talesofeternia-doc](https://github.com/vs-sr-dev/ps1-talesofeternia-doc).
+
 ## Verification
 
 [`tools/verify.py`](../tools/verify.py) walks every extent of every archive,

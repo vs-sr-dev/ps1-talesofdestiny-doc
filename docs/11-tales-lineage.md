@@ -95,16 +95,61 @@ array at `0x8019622C`.
 Two years and two platforms apart, both teams reached for the same answer: the
 asset directory is part of the program, not part of the data.
 
+## What comes next: *Tales of Eternia*, 2000
+
+Everything above compares 1995 with 1997. The third title settles a question
+this document had to leave open.
+
+*Tales of Eternia* (PlayStation, October 2000) uses the same codec — and not
+as a reimplementation. Set its two decompressors beside this disc's:
+
+| Routine | Eternia, 2000 | Destiny, 1997 | Identical prefix |
+|---|---|---|---|
+| method 1 | `0x80023504` | `0x80150BB0` | **53 words / 212 bytes** |
+| method 3 | `0x80023690` | `0x80150D4C` | **50 words / 200 bytes** |
+
+That prefix is the entire ring-preload prologue: the zero loop, both
+256-iteration pattern loops, `RING − 18` and `RING − 17`. It contains no
+`lui`/`addiu` address pairs, so nothing in it could differ merely because the
+code was linked at a different address. After the prologue the two builds
+diverge in register allocation only — this disc's method-3 routine holds its
+flag register in `t5` where Eternia's uses `t4`.
+
+Three other things the 2000 disc says about this one:
+
+* **The stored path was fixed.** Method 0, dead and mis-wired here
+  ([04](04-block-codec.md)), does `addiu a1, s0, 9` there and is used 969
+  times.
+* **The compiled-in directory was on its way out.** This disc keeps all five
+  extent tables inside the executable. Eternia keeps three of four and moves
+  `B.D`'s onto the disc as a file — while leaving the superseded compiled copy
+  in the binary, wrong in 1,289 of its 1,290 entries. The transition is caught
+  half-finished.
+* **The XA budget was re-spent, not increased.** Eight stereo channels here,
+  sixteen mono channels there; both come to exactly 150 sectors per second
+  ([07](07-audio.md)).
+
+Full comparison: [ps1-talesofeternia-doc](https://github.com/vs-sr-dev/ps1-talesofeternia-doc).
+The format itself, for all three titles, is in
+[tales-blockcodec-doc](https://github.com/vs-sr-dev/tales-blockcodec-doc).
+
 ## What this does not show
 
-Nothing here demonstrates shared source code. The 65816 and MIPS decoders are
-different programs; only the *format* is the same, and a format can travel as
-a specification, a packing tool, or one programmer's memory. The most
-economical reading is that the packer — the tool on the PC side that produced
-the blocks — was carried forward and the decoder rewritten to match it, which
-is the usual way a compression format outlives its hardware. The nibble swap
-fits that reading: it is the sort of thing that changes when code is rewritten
-from a description rather than ported line by line.
+Nothing here demonstrates shared source code **between 1995 and 1997**. The
+65816 and MIPS decoders are different programs; only the *format* is the same,
+and a format can travel as a specification, a packing tool, or one
+programmer's memory. The most economical reading is that the packer — the tool
+on the PC side that produced the blocks — was carried forward and the decoder
+rewritten to match it, which is the usual way a compression format outlives its
+hardware. The nibble swap fits that reading: it is the sort of thing that
+changes when code is rewritten from a description rather than ported line by
+line.
+
+Between 1997 and 2000 the situation is different, and the difference is
+measured rather than inferred: 212 bytes of identical object code mean the
+*source* of the decoder was still on hand and still compiling. Whatever
+happened to this format between the Super Famicom and the PlayStation happened
+once, and then stopped happening.
 
 *Phantasia*'s Super Famicom engine is credited to Yoshiharu Gotanda, who left
 Wolf Team with Masaki Norimoto and Hiroya Hatsushiba to found tri-Ace

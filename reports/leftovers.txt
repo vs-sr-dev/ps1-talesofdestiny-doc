@@ -86,3 +86,18 @@ The data track ends at LBA 220543, so the whole extent lies outside it:
 LBA 220694 is exactly where track 2, the CD-DA audio track, starts after
 its 150-sector pre-gap, and 220694 + 18043 = 238737 is the volume size the PVD
 declares.  The pad file names the music track.
+
+-- what is in the empty interleave slots -----------------------------
+S.XA    15682 of  23968 sectors carry no submode bits (65.4%), 32,116,736 bytes
+T.XA        0 of  70760 sectors carry no submode bits (0.0%), 0 bytes
+15,682 filler sectors overall, 32,116,736 bytes -- and they are not blank.
+
+printable runs that read as text, out of 14 distinct runs in all:
+   14487 x  'rogram Manager'
+     440 x  'rTE4-'
+      10 x  'Execute'
+
+"rogram Manager" is the tail of "Program Manager", the title of the
+Windows shell window.  The machine that authored this XA stream was
+running Windows, and the tool wrote its uncleared buffer into every
+unused slot of the interleave.

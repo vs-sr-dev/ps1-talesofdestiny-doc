@@ -91,3 +91,24 @@ python tools/leftovers.py    "$TOD" iso/ --filler
   `set PYTHONIOENCODING=utf-8` first, or redirect to a file.
 * `vram_map.py` writes a coarse ASCII map; the CSV it can emit is the
   authoritative form.
+* `leftovers.py --xa-filler` sweeps the unused slots of the XA interleave and
+  takes about a minute.
+
+## Two corrections, made while documenting Tales of Eternia
+
+Both change numbers that earlier versions of this repository published.
+
+* **`iso9660.py`** decoded the CD-XA directory attribute bits one position
+  low, so Form-1 files read as `MODE2`, interleaved files as `FORM2`, and
+  `DUMMY3M.DA` as `INTERLEAVED`. ECMA-168 puts Mode 2 Form 1 at bit 11, Form 2
+  at 12, interleaved at 13, CD-DA at 14 and directory at 15. With the fix
+  `DUMMY3M.DA` reads `4555[CDDA]`, which is what it always was.
+
+* **`str_probe.py`** decoded the CD-XA coding byte's three two-bit fields in
+  the reverse order, so `0x01` read as "mono 18.9 kHz" instead of "stereo
+  37.8 kHz". The disc settles it on its own: four of the five audio-bearing
+  movies match stereo 37.8 kHz to two decimal places against their own running
+  time, and mono 18.9 kHz is four times out on every one of them. The voice on
+  this disc is **stereo 37.8 kHz**, and the eight-channel interleave turns out
+  to fill a double-speed drive exactly. See
+  [docs/07-audio.md](../docs/07-audio.md).

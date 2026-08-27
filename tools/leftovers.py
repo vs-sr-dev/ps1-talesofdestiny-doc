@@ -2,11 +2,14 @@
 being used before it did.
 
     python tools/leftovers.py TRACK.bin ISODIR
+    python tools/leftovers.py TRACK.bin ISODIR --filler
+    python tools/leftovers.py TRACK.bin ISODIR --xa-filler
 
 ISODIR is the directory produced by tools/iso9660.py --extract.
 """
 
 import os
+import re
 import struct
 import sys
 from collections import Counter
@@ -157,6 +160,60 @@ def filler(track):
         print('declares.  The pad file names the music track.')
 
 
+# (name, first lba, sectors), from the ISO directory
+XA_FILES = [('S.XA', 125101, 23968), ('T.XA', 149069, 70760)]
+WORDY = re.compile(rb'[\x20-\x7e]{5,}')
+
+
+def xa_filler(track):
+    """What is in the unused slots of the eight-channel XA interleave.
+
+    S.XA puts three live channels on an eight-slot grid and leaves five slots
+    per cycle with no submode bits set at all.  Those sectors were never
+    cleared, and about 72% of each one is non-zero.  Almost all of it is
+    unreadable, but one fragment is not.
+    """
+    rule('what is in the empty interleave slots')
+    d = Disc(track)
+    runs = Counter()
+    total = 0
+    for name, lba, n in XA_FILES:
+        here = 0
+        for l in range(lba, min(lba + n, d.sectors)):
+            s = d.raw(l)
+            if s[0x12] != 0:
+                continue
+            here += 1
+            body = s[HDR:HDR + 2048]
+            for m in WORDY.finditer(body):
+                runs[m.group()] += 1
+        total += here
+        print('%-6s %6d of %6d sectors carry no submode bits (%.1f%%), %s bytes'
+              % (name, here, n, 100.0 * here / n, format(here * 2048, ',')))
+    print('%s filler sectors overall, %s bytes -- and they are not blank.'
+          % (format(total, ','), format(total * 2048, ',')))
+
+    def wordy(b):
+        t = b.decode('latin1')
+        good = sum(1 for c in t if c.isalpha() or c in ' ._-')
+        return good / len(t) >= 0.8 and any(c in 'aeiouAEIOU' for c in t)
+
+    keep = sorted(((k, v) for k, v in runs.items() if wordy(k)),
+                  key=lambda kv: -kv[1])
+    print()
+    print('printable runs that read as text, out of %d distinct runs in all:'
+          % len(runs))
+    for k, v in keep[:12]:
+        print('  %6d x  %r' % (v, k.decode('latin1')))
+    if not keep:
+        print('  (none)')
+    print()
+    print('"rogram Manager" is the tail of "Program Manager", the title of the')
+    print('Windows shell window.  The machine that authored this XA stream was')
+    print('running Windows, and the tool wrote its uncleared buffer into every')
+    print('unused slot of the interleave.')
+
+
 def main(argv):
     track, isodir = argv[0], argv[1]
     exe = Exe(os.path.join(isodir, 'SLPS_011.00'))
@@ -170,6 +227,8 @@ def main(argv):
     ring(exe)
     if '--filler' in argv:
         filler(track)
+    if '--xa-filler' in argv:
+        xa_filler(track)
 
 
 if __name__ == '__main__':

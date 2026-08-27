@@ -72,8 +72,12 @@ class Entry:
             return ''
         own_g, own_u, attr = struct.unpack_from('>HHH', self.xa, 0)
         bits = []
-        for bit, n in ((0x0800, 'MODE2'), (0x1000, 'FORM1'), (0x2000, 'FORM2'),
-                       (0x4000, 'INTERLEAVED'), (0x8000, 'CDDA')):
+        # ECMA-168 bit numbering: 11 Mode 2 Form 1, 12 Mode 2 Form 2,
+        # 13 interleaved, 14 CD-DA, 15 directory.  The low 0x0555 are the
+        # owner/group/world read and execute permissions.
+        for bit, n in ((0x0800, 'FORM1'), (0x1000, 'FORM2'),
+                       (0x2000, 'INTERLEAVED'), (0x4000, 'CDDA'),
+                       (0x8000, 'DIRECTORY')):
             if attr & bit:
                 bits.append(n)
         return 'attr=%04X[%s] owner=%d:%d' % (attr, ','.join(bits), own_g, own_u)

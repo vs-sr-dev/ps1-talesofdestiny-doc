@@ -234,6 +234,51 @@ Two strings suggest features that are, at minimum, unusual for a retail JRPG:
 readout, and `MapNo:` / `Evt No:` / `movie:` are the three fields of a
 one-line debug overlay. `ADJUST SCREEN` is a legitimate option-screen feature.
 
+## What the mastering machine left in the empty interleave slots
+
+`XA/S.XA` puts three live channels on an eight-slot grid and leaves five slots
+per cycle with no submode bits set at all — **15,682 sectors, 32,116,736
+bytes, 65.4% of a 49 MB file** ([07](07-audio.md)).
+
+Those sectors were never cleared. About 72% of each one is non-zero, and
+though almost all of it is unreadable, one fragment is not:
+
+```
+  14487 x  'rogram Manager'
+     10 x  'Execute'
+```
+
+in context:
+
+```
+01 00 00 00 | r o g r a m   M a n a g e r | 00 00 00 84 00 40 02 0c 14 74
+```
+
+**`Program Manager`** is the window title of the Windows shell — Program
+Manager was the shell of Windows 3.1 and remained a live window class under
+Windows 95. The machine that authored this XA stream was a Windows box, the
+tool that wrote the interleave reused a buffer without clearing it, and a
+fragment of the host's own memory went onto 14,487 sectors of a retail
+PlayStation disc.
+
+Only fourteen distinct printable runs survive across all 15,682 sectors, so
+this is one small buffer repeated rather than a general memory dump. It says
+nothing about the game and everything about how it was made.
+
+Run it with:
+
+```sh
+python tools/leftovers.py "$TOD" iso/ --xa-filler
+```
+
+*Tales of Eternia* does the same thing three years later, with a different
+result: its three XA files have 30,773 filler sectors between them and they
+carry the **source paths** of the voice authoring — `mp\chat.wav\skit.xa\`,
+`mp\scenew.xa\`, `mp\voice.xa\` — one path per interleave channel, which is
+what identifies the three archives. Same class of mistake, different tool,
+different leak. See
+[ps1-talesofeternia-doc](https://github.com/vs-sr-dev/ps1-talesofeternia-doc).
+
 ## The memory card
 
 ```

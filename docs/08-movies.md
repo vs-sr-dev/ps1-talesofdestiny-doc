@@ -68,9 +68,21 @@ budget.
 ## Frame rates and budgets
 
 `OP.STR` at 304×160 uses 16,048 video sectors for 1,832 frames — 8.76 sectors
-per frame. Delivered at 150 sectors per second, that is **17.1 frames per
-second**; at double speed with the interleaved audio taking its share, the
-effective rate lands near the usual 15 fps of the era.
+per frame. The rate follows from the whole file rather than the video alone:
+18,392 sectors delivered at the double-speed rate of 150 per second is 122.61
+seconds, and 1,832 frames in 122.61 seconds is **14.94 frames per second**.
+
+The same division gives 14.98 for `EVA.STR` and 13.11 for `EVC.STR`, so the
+four event movies are all the era's usual 15 fps.
+
+**`LOGO.STR` is not.** Its 776 sectors are 5.17 seconds and it carries 155
+frames — **29.96 fps**, twice the rate of everything else on the disc. It is
+also the only movie at 320×240, the only one on submode `0x42` (`RT | VIDEO`)
+rather than `RT | DATA`, and one of the two at bitstream version 1. Its frames
+are small and nearly uniform (6,480 to 8,016 bytes, mean 7,172) because at
+30 fps that is all the budget there is. Whatever encoded the two logo movies
+was configured differently from whatever encoded the four event movies, in
+every parameter at once.
 
 Bitstream sizes per frame:
 

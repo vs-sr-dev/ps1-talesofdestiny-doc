@@ -124,9 +124,29 @@ between the two is not established here.
 ## The XA streams
 
 `XA/S.XA` and `XA/T.XA` are 194,002,944 bytes between them — 43% of the whole
-disc. Every Form 2 sector in both reports the same coding byte:
+disc. Every Form 2 sector in both reports the same coding byte, `0x01`:
 
-**mono, 18.9 kHz, 4-bit** — XA-ADPCM level C mono.
+**stereo, 37.8 kHz, 4-bit** — XA-ADPCM level B stereo.
+
+> **Corrected.** This document previously read that byte as *mono 18.9 kHz*,
+> from a decoder that had the coding byte's three two-bit fields in the reverse
+> order. The disc settles it without reference to any specification. Four of
+> the five audio-bearing movies carry an exact ratio between their audio
+> sectors and their running time, and only one reading of the byte fits:
+>
+> | | sectors → seconds at 2× | audio sectors as stereo 37.8 kHz | as mono 18.9 kHz |
+> |---|---:|---:|---:|
+> | `OP.STR` | 122.61 s | **122.61 s** | 490.45 s |
+> | `EVB.STR` | 61.49 s | **61.49 s** | 245.97 s |
+> | `EVC.STR` | 39.20 s | **39.20 s** | 156.80 s |
+> | `EVA.STR` | 49.79 s | **48.75 s** | 194.99 s |
+>
+> A stereo 37.8 kHz sector holds 2,016 samples per side, 53.33 ms; a mono
+> 18.9 kHz sector holds 4,032 samples, 213.33 ms, which would give every movie
+> four times as much audio as it is long. The corrected field order is
+> `bits 0-1` channels, `bits 2-3` sample rate, `bits 4-5` bits per sample,
+> which is what ECMA-130 specifies. `tools/str_probe.py` now decodes it that
+> way and says so in its docstring.
 
 ### `T.XA`: eight channels, exactly matched to double speed
 
@@ -141,12 +161,21 @@ through 7** cycling one sector at a time:
 149077  ch 0     ...
 ```
 
-A level-C mono stream consumes 37.5 sectors per second. An eight-way
-interleave read at single speed would deliver 150 / 8 = 18.75 sectors per
-second to any one channel — half of what the decoder needs. Read at **double
-speed**, 300 sectors per second, each channel gets exactly 37.5. The
-interleave depth and the drive mode are matched to the byte; this is not an
-accident of mastering.
+A level-B stereo stream consumes **18.75 sectors per second**: 2,016 samples
+per side per sector at 37.8 kHz is 53.33 ms of sound. The PlayStation drive at
+double speed delivers **150 sectors per second**, and an eight-way interleave
+gives any one channel exactly 150 / 8 = **18.75**.
+
+The match is exact, and it is the whole design: eight simultaneous voice
+streams is precisely what a double-speed drive can carry at this coding, with
+nothing left over. The interleave depth and the coding byte were chosen
+together.
+
+*Tales of Eternia*, three years later, spends the same budget the other way —
+**sixteen** channels of **mono** 37.8 kHz, 9.375 sectors per second each,
+which also comes to exactly 150. Twice the simultaneous voices, no stereo.
+See [11](11-tales-lineage.md) and
+[ps1-talesofeternia-doc](https://github.com/vs-sr-dev/ps1-talesofeternia-doc).
 
 `SLPS_011.00` indexes the file with a table of 258 `(first sector, last
 sector)` pairs at `0x80192FF4`, consumed by the player at `0x8014F0B8`:
@@ -181,9 +210,12 @@ ever tagged as audio:
 
 The pattern on disc is `ch0, ch1, ch2, then five sectors with no submode bits
 set at all`, repeating 11,282 times. Those five are the unused slots of the
-interleave. They are not blank — their user data is non-zero, and they still
-carry a coding byte — but nothing marks them as audio, real-time or data, so
-the drive's XA filter drops them.
+interleave. They are not blank — about 72% of each one is non-zero — but
+nothing marks them as audio, real-time or data, so the drive's XA filter drops
+them.
+
+What is actually in them is a leftover, and it names the machine that made the
+disc. See [10](10-leftovers.md).
 
 Sixty-five per cent of a 49 MB file is empty interleave slots: 32 MB of disc
 spent to keep three streams on an eight-slot grid that only `T.XA` needs. The
