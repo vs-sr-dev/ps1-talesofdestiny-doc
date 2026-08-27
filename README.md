@@ -52,7 +52,9 @@ compressor. See [06](docs/06-graphics.md), [07](docs/07-audio.md),
 and *Tales of Destiny* (1997) share a nine-byte block header, the same method
 numbering, the same 4 KiB window, and — to the constant — the same
 run-length escape arithmetic. Two years, two CPU architectures, one packer.
-See [11](docs/11-tales-lineage.md).
+See [11](docs/11-tales-lineage.md), and
+[tales-blockcodec-doc](https://github.com/vs-sr-dev/tales-blockcodec-doc) for
+the format on its own, with a decoder that handles both dialects.
 
 Start at [docs/01-overview.md](docs/01-overview.md).
 
@@ -72,7 +74,7 @@ Start at [docs/01-overview.md](docs/01-overview.md).
 | [08 — Movies](docs/08-movies.md) | Six STR files, three encoders, one that forgot its audio |
 | [09 — Text and the font](docs/09-text.md) | JIS X 0201, per-file glyph inventories, the technique kanji |
 | [10 — Leftovers](docs/10-leftovers.md) | `DEBUG.TXT`, a debug save, a profiler HUD, and a dead code path |
-| [11 — The Tales lineage](docs/11-tales-lineage.md) | What 1997 kept from 1995, measured |
+| [11 — The Tales lineage](docs/11-tales-lineage.md) | What 1997 kept from 1995, measured — the format itself lives in [tales-blockcodec-doc](https://github.com/vs-sr-dev/tales-blockcodec-doc) |
 | [99 — Open questions](docs/99-open-questions.md) | What is still unknown, and how to attack it |
 
 ## Tools

@@ -10,6 +10,13 @@ Original: three routines plus a dispatcher, `0x80150BB0` – `0x80151004` and
 `0x8015160C`, in `SLPS_011.00`. Full listing in
 [`reports/exe-map.txt`](../reports/exe-map.txt).
 
+> This document covers **this build's** implementation: its addresses, its
+> dispatcher, its dictionary and its verification. The format itself — which
+> this game shares with the 1995 Super Famicom *Tales of Phantasia* — is
+> documented once, with a decoder for both dialects, at
+> [tales-blockcodec-doc](https://github.com/vs-sr-dev/tales-blockcodec-doc).
+> See [11](11-tales-lineage.md) for what the two have in common.
+
 ## Block header
 
 Every packed block on the disc starts with the same nine bytes.
