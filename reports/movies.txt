@@ -1,0 +1,52 @@
+=== EVA.STR ===
+  video sectors  6535 in 746 frames
+  audio sectors  914
+  other          19
+  304x160  chunk type 0x8001  bs magic 0x3800  bs version 2   on 6535 sectors
+  frame numbers  1 .. 746, 746 distinct, 0 incomplete
+  bitstream      1720 .. 18124 bytes, mean 14403
+=== EVB.STR ===
+  video sectors  7866 in 898 frames
+  audio sectors  1153
+  other          205
+  304x160  chunk type 0x8001  bs magic 0x3800  bs version 3   on 7866 sectors
+  frame numbers  1 .. 898, 898 distinct, 0 incomplete
+  bitstream      676 .. 18136 bytes, mean 11903
+=== EVC.STR ===
+  video sectors  4503 in 514 frames
+  audio sectors  735
+  other          642
+  304x160  chunk type 0x8001  bs magic 0x3800  bs version 3   on 4503 sectors
+  frame numbers  1 .. 514, 514 distinct, 0 incomplete
+  bitstream      676 .. 18144 bytes, mean 12235
+=== LOGO.STR ===
+  video sectors  679 in 155 frames
+  audio sectors  71
+  other          26
+  320x240  chunk type 0x8001  bs magic 0x3800  bs version 1   on 679 sectors
+  frame numbers  1 .. 155, 155 distinct, 0 incomplete
+  bitstream      6480 .. 8016 bytes, mean 7172
+=== NAMCO.STR ===
+  video sectors  850 in 170 frames
+  audio sectors  0
+  other          0
+  256x240  chunk type 0x8001  bs magic 0x3800  bs version 1   on 850 sectors
+  frame numbers  1 .. 170, 170 distinct, 0 incomplete
+  bitstream      2172 .. 10040 bytes, mean 7138
+=== OP.STR ===
+  video sectors  16048 in 1832 frames
+  audio sectors  2299
+  other          45
+  304x160  chunk type 0x8001  bs magic 0x3800  bs version 3   on 16048 sectors
+  frame numbers  1 .. 1832, 1832 distinct, 0 incomplete
+  bitstream      676 .. 19532 bytes, mean 13040
+=== S.XA ===
+  coding 00  submode 00 -                         15682 sectors   mono 37.8 kHz 4 bit
+  coding 00  submode 80 EOF                           1 sectors   mono 37.8 kHz 4 bit
+  coding 01  submode 64 RT|FORM2|AUDIO             8282 sectors   mono 18.9 kHz 4 bit
+  coding 01  submode E4 EOF|RT|FORM2|AUDIO            3 sectors   mono 18.9 kHz 4 bit
+  3 distinct file/channel pairs
+=== T.XA ===
+  coding 01  submode 64 RT|FORM2|AUDIO            70752 sectors   mono 18.9 kHz 4 bit
+  coding 01  submode E4 EOF|RT|FORM2|AUDIO            8 sectors   mono 18.9 kHz 4 bit
+  8 distinct file/channel pairs

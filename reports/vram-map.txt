@@ -1,0 +1,79 @@
+VRAM occupancy, one cell = 64x16 pixels of the 1024x512 frame buffer.
+Shade is the log of how many 16-bit words every image on the disc
+together writes into that cell; blank means no image ever does.
+    0   256 512 768 
+  0     *@@@@@@@@@@@
+ 16     *@@@@@@@@@@@
+ 32     *@@#@@@@@@@@
+ 48     *@@#@@@@@@@@
+ 64     *@@@@@**@@@@
+ 80     *@@@@@**@@@@
+ 96     *@@@@@**@@@@
+112     *@@@@@**@@@@
+128     *@@@@@@*@@@@
+144     *@@@@@@*@@@@
+160     *@@@@@**@@@@
+176     *@@@@@**@@@%
+192     *@@@@@**@@@@
+208     *@@@@@**@@@@
+224     *@@@@@*@@@@@
+240     *@@@@@*%@@@@
+256     @@@@@@@@@@  
+272     @@@@@@@@@@  
+288     @@@@@@@@@@  
+304     @@@@@@@@@@  
+320     @@@@@@@@@@  
+336     @@@@@@@@@@  
+352     @@@@@@@@@@  
+368     @@@@@@@@@@  
+384     @@@@@@@@@@  
+400     @@@@@@@@@@  
+416     @@@@@@@@@@  
+432     @@@@@@@@@@  
+448     @@@@@@@@@@  
+464     @@@@@@@@@@  
+480 @@@@@@@@@@@@@@  
+496 @@@@@@@@@@@@@@ @
+
+443 distinct rectangles, 47481 image writes
+rectangle                      writes  kind
+( 320,255)  16 x   1 words     7187  clut
+( 320,  0)  64 x  32 words     4692  pixels
+( 704,232)  16 x   1 words     1903  clut
+( 496,191)  16 x   1 words     1493  clut
+( 320,  0)  64 x  64 words     1330  pixels
+(   0,480) 256 x   1 words     1302  clut
+( 768,  0) 128 x 256 words     1286  pixels
+(   0,496) 256 x   1 words     1210  clut
+( 768,256) 128 x 256 words     1202  pixels
+( 320,  0)  36 x  32 words     1194  pixels
+( 320,  0)  48 x  32 words     1186  pixels
+( 256,480) 256 x   1 words     1042  clut
+( 512,  0) 128 x 256 words     1029  pixels
+( 256,480)  16 x   1 words     1015  clut
+( 256,496)  16 x   1 words      768  clut
+( 496,166)  16 x   1 words      760  clut
+( 384,192)  64 x  64 words      738  pixels
+( 256,496) 256 x   1 words      601  clut
+( 512,256) 128 x 256 words      585  pixels
+( 496,158)  16 x   1 words      562  clut
+( 384,192)  64 x  32 words      492  pixels
+( 320,  0)  36 x  24 words      480  pixels
+( 976,200)   8 x  32 words      458  pixels
+(1008,246)  16 x   1 words      458  clut
+( 512,  0)  64 x  32 words      426  pixels
+( 384, 64)  64 x  64 words      425  pixels
+( 496,200)  16 x   1 words      391  clut
+( 496,150)  16 x   1 words      379  clut
+(   0,481) 256 x   1 words      361  clut
+( 496,172)  16 x   1 words      307  clut
+( 448, 96)  64 x  32 words      283  pixels
+( 496,216)  16 x   1 words      277  clut
+( 512,  0)  64 x  64 words      273  pixels
+( 384,192)  52 x  64 words      263  pixels
+(   0,511)  16 x   1 words      255  clut
+( 448, 96)  64 x  64 words      241  pixels
+( 320, 64)  36 x  24 words      240  pixels
+( 320,  0)  24 x  16 words      205  pixels
+( 640,480)  64 x  32 words      204  pixels
+( 320,  0)  24 x  32 words      203  pixels

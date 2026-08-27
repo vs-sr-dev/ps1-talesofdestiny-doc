@@ -1,0 +1,203 @@
+map   10  id 0600  sub  0  ｔｏｄ２を８０に変更
+map   10  id 0600  sub  0  ｔｏｄ２を６０に変更
+map   11  id 0601  sub  0  「直径６ｃｍの円形をしている
+map   11  id 0601  sub  0  『Ｆ−２７
+map   19  id 0609  sub  0  『グルメＢ』
+map   19  id 0609  sub  0  ｔｏｄ２＝
+map   25  id 060F  sub  0  ｔｏｄ２を１５４０へ
+map   25  id 060F  sub  0  ｔｏｄ２を１６０１へ
+map   25  id 060F  sub  0  ｔｏｄ２を１１００へ
+map   25  id 060F  sub  0  ｔｏｄ２＝１１４０
+map   25  id 060F  sub  0  Ｗ衛兵
+map   26  id 0610  sub  0  『Ｆ４８
+map   26  id 0610  sub  0  　Ｆ４８がよくわからないんだ」
+map  107  id 031F  sub  0  『グルメＣ』
+map  113  id 0325  sub  0  　ｔｏｄ２＝４００
+map  113  id 0325  sub  0  　ｔｏｄ２＝４４０
+map  115  id 0327  sub  0  宿屋『ＯＲＣ’ｓＩＮＮ』
+map  115  id 0327  sub  0  酒場『ＵＲＵ・ＵＲＵ』
+map  127  id 0378  sub  0  イグナシー１Ｆ
+map  127  id 0378  sub  0  イグナシー２Ｆ
+map  127  id 0378  sub  0  イグナシー３Ｆ
+map  151  id 0385  sub  0  空中都市クラウディスａ
+map  151  id 0385  sub  0  空中都市クラウディスｂ
+map  169  id 0397  sub  0  Ａ　１Ｆ
+map  169  id 0397  sub  0  Ａ　２Ｆ
+map  169  id 0397  sub  0  Ａ　３Ｆ
+map  169  id 0397  sub  0  Ａ　４Ｆ
+map  169  id 0397  sub  0  Ａ　５Ｆ
+map  169  id 0397  sub  0  Ｂ　１Ｆ
+map  169  id 0397  sub  0  Ｂ　２Ｆ
+map  169  id 0397  sub  0  Ｂ　３Ｆ
+map  177  id 039F  sub  0  ミックハイル　１Ｆ
+map  177  id 039F  sub  0  ミックハイル　２Ｆ
+map  177  id 039F  sub  0  ミックハイル　３Ｆ
+map  177  id 039F  sub  0  ミックハイル　４Ｆ
+map  177  id 039F  sub  0  ミックハイル　５Ｆ
+map  177  id 039F  sub  0  スイッチＡを切り替えた。
+map  177  id 039F  sub  0  スイッチＣを切り替えた。
+map  177  id 039F  sub  0  スイッチＤを切り替えた。
+map  177  id 039F  sub  0  スイッチＨを切り替えた。
+map  177  id 039F  sub  0  スイッチＧを切り替えた。
+map  177  id 039F  sub  0  ｔｏｄ２＝１９７１
+map  212  id 03E4  sub  0  ｔｏｄ２＝２０５０
+map  215  id 0A02  sub  0  ベルクラント　１Ｆ
+map  215  id 0A02  sub  0  ベルクラント　２Ｆ
+map  215  id 0A02  sub  0  ベルクラント　３Ｆ
+map  215  id 0A02  sub  0  ベルクラント　４Ｆ
+map  215  id 0A02  sub  0  ベルクラント　５Ｆ
+map  215  id 0A02  sub  0  ベルクラント　６Ｆ
+map  228  id 03E6  sub  0  クラウディス１Ｆ
+map  228  id 03E6  sub  0  クラウディス２Ｆ
+map  228  id 03E6  sub  0  クラウディス３Ｆ
+map  228  id 03E6  sub  0  クラウディス４Ｆ
+map  228  id 03E6  sub  0  クラウディス５Ｆ
+map  292  id 0A54  sub  0  ｔｏｄ２＝３０６０
+map  292  id 0A54  sub  0  ｔｏｄ２＝３０５０
+map  301  id 0A27  sub  0  シュサイア１Ｆ
+map  301  id 0A27  sub  0  シュサイア２Ｆ
+map  301  id 0A27  sub  0  シュサイア３Ｆ
+map  301  id 0A27  sub  0  シュサイア４Ｆ
+map  301  id 0A27  sub  0  シュサイア５Ｆ
+map  309  id 0A67  sub  0  ロディオン１Ｆ
+map  309  id 0A67  sub  0  ロディオン２Ｆ
+map  309  id 0A67  sub  0  ロディオン３Ｆ
+map  309  id 0A67  sub  0  ロディオン４Ｆ
+map  309  id 0A67  sub  0  ロディオン５Ｆ
+map  345  id 0500  sub  0  魔物の塔（Ｎ＿Ｄ０１）
+map  345  id 0500  sub  0  魔物の塔（Ｎ＿Ｄ０２）
+map  345  id 0500  sub  0  魔物の塔（Ｎ＿Ｄ０３）
+map  345  id 0500  sub  0  魔物の塔（Ｎ＿Ｄ０４）
+map  349  id 0531  sub  0  　こちらの準備はＯＫです」
+map  349  id 0531  sub  0  「身長１７０ｃｍ、体重６０ｋｇ
+map  349  id 0531  sub  0  「身長１６７ｃｍ、体重４８ｋｇ
+map  349  id 0531  sub  0  「身長１７１ｃｍ、体重６５ｋｇ
+map  382  id 0333  sub  0  ｔｏｄ２＝１７０
+map  382  id 0333  sub  0  ｔｏｄ２＝１５０
+map  382  id 0333  sub  0  Ｆ３７
+map  382  id 0333  sub  0  「『ライブラ・ＩＶ』ですが、
+map  382  id 0333  sub  0  『グルメＤ』
+map  400  id 0519  sub  0  ｔｏｄ２＝１７００
+map  400  id 0519  sub  0  『Ｘ』
+map  400  id 0519  sub  0  『Ｉ』
+map  400  id 0519  sub  0  『Ｘ＝グリーン』
+map  400  id 0519  sub  0  『Ｖ＝ブルー』
+map  400  id 0519  sub  0  ＧＡＴ−１５０
+map  400  id 0519  sub  0  《ＩＶ》
+map  424  id 0550  sub  0  ＳＨＲ−８１４
+map  424  id 0550  sub  0  　“さ１Ｒ”』
+map  424  id 0550  sub  0  『“か４Ｕ”＝“く”』
+map  424  id 0550  sub  0  『“は４Ｌ”』
+map  424  id 0550  sub  0  『ＳＥＴ・ＴＲＥＡＳＵＲＥ……
+map  455  id 056F  sub  0  ｔｏｄ２＝１１４５
+map  475  id 0583  sub  0  「準備ＯＫです！」
+map  478  id 0400  sub  0  ｔｏｄ２＝２６０
+map  489  id 0404  sub  0  ｔｏｄ２＝６９８
+map  489  id 0404  sub  0  ｔｏｄ２＝２８０
+map  518  id 0428  sub  0  「Ｆマート百貨店の裏手にまわり
+map  519  id 0429  sub  0  ｔｏｄ２＝６１０
+map  521  id 0425  sub  0  ｔｏｄ２＝３００
+map  521  id 0425  sub  0  ｔｏｄ２＝３３０
+map  521  id 0425  sub  0  ｔｏｄ２＝１５６０
+map  523  id 042B  sub  0  『Ｆ０７
+map  529  id 0431  sub  0  『Ｆマート百貨店』
+map  529  id 0431  sub  0  『パブ・パープルローズＢ１Ｆ』
+map  529  id 0431  sub  0  「ＳＰバーガーへようこそ！
+map  529  id 0431  sub  0  　スーパー・Ｆマートです！」
+map  529  id 0431  sub  0  　ＵＦＯが
+map  541  id 043F  sub  0  フードサックＬを
+map  541  id 043F  sub  0  『ＴｏＤ２』第１５００話
+map  541  id 043F  sub  0  『ＴｏＤ２』第１５１０話
+map  541  id 043F  sub  0  『ＴｏＤ２』第１４８０話
+map  541  id 043F  sub  0  Ｋ　　　
+map  541  id 043F  sub  0  グルメＡをあげますか？
+map  541  id 043F  sub  0  グルメＡをあげました。
+map  541  id 043F  sub  0  グルメＢをあげますか？
+map  541  id 043F  sub  0  グルメＢをあげました。
+map  541  id 043F  sub  0  グルメＣをあげますか？
+map  541  id 043F  sub  0  グルメＣをあげました。
+map  541  id 043F  sub  0  グルメＤをあげますか？
+map  541  id 043F  sub  0  グルメＤをあげました。
+map  541  id 043F  sub  0  グルメＡをゲット！！
+map  541  id 043F  sub  0  グルメＢをゲット！！
+map  541  id 043F  sub  0  グルメＣをゲット！！
+map  541  id 043F  sub  0  グルメＤをゲット！！
+map  549  id 0447  sub  0  ｔｏｄ２を７６０に変更
+map  596  id 0476  sub  0  ｔｏｄ２＝１２００
+map  612  id 0485  sub  0  ｔｏｄ２＝９００
+map  652  id 04AD  sub  0  　　　　　Ｖ．Ｓ．
+map  660  id 04B4  sub  0  ｔｏｄ２＝１７４０
+map  699  id 0219  sub  0  「あたしはＵＦＯ襲来説が
+map  699  id 0219  sub  0  「海、うみ、ＵＭＩ……！
+map  700  id 021A  sub  0  「『ライブラ・ＩＶ』？
+map  700  id 021A  sub  0  ｔｏｄ２＝２５５
+map  700  id 021A  sub  0  ｔｏｄ２＝１６６０
+map  700  id 021A  sub  0  『ライブラ・ＩＶ』と書いてある
+map  714  id 0234  sub  0  『Ｆ３３
+map  714  id 0234  sub  0  Ｆ○○
+map  757  id 0253  sub  0  「ああ、準備ＯＫだよ」
+map  775  id 0281  sub  0  　　　ＧＥＴ　ＲＥＡＤＹ
+map  775  id 0281  sub  0  　　　　ＰＬＡＹＥＲ
+map  775  id 0281  sub  0  　　　　　ＦＬＯＯＲ
+map  775  id 0281  sub  0  ＹＯＵ　ＺＡＰＰＥＤ
+map  775  id 0281  sub  0  　　　　　　　ＴＯ　．．．
+map  847  id 0704  sub  0  １．光るがらくた　　６０００Ｇ
+map  847  id 0704  sub  0  ２．パイングミ　　　１０００Ｇ
+map  847  id 0704  sub  0  ３．レモングミ　　　　７５０Ｇ
+map  847  id 0704  sub  0  ４．ウイングドブーツ２０００Ｇ
+map  847  id 0704  sub  0  １．パイングミ　　　１０００Ｇ
+map  847  id 0704  sub  0  ２．レモングミ　　　　７５０Ｇ
+map  847  id 0704  sub  0  ３．ウイングドブーツ２０００Ｇ４．やめておく
+map  849  id 0706  sub  0  ｔｏｄ２＝１０００
+map  859  id 0707  sub  0  ｔｏｄ２：０
+map  859  id 0707  sub  0  ｔｏｄ２：９５０
+map  859  id 0707  sub  0  １．アップルグミ　　　６０Ｇ
+map  859  id 0707  sub  0  ２．オレンジグミ　　　２００Ｇ
+map  859  id 0707  sub  0  ３．ライフボトル　　　３００Ｇ
+map  859  id 0707  sub  0  ４．パナシーアボトル　１６０Ｇ
+map  877  id 0801  sub  0  『ｔｏｄ２＝７４１
+map  877  id 0801  sub  0  『−ＮＡＭＪＡ　ＴＯＷＮ−』
+map  877  id 0801  sub  0  『ナンジャＶＩＰパスポート
+map  879  id 0803  sub  0  ｔｏｄ２＝２２００
+map  879  id 0803  sub  0  『Ｆ３８
+map  879  id 0803  sub  0  譜面Ｇをかきあげた。
+map  879  id 0803  sub  0  『グルメＡ』
+map  889  id 080D  sub  0  『Ｆ２４
+map  889  id 080D  sub  0  『Ｆ１７
+map  901  id 0819  sub  0  『Ｆ１１
+map  901  id 0819  sub  0  『Ｆ２６
+map  901  id 0819  sub  0  『Ｆ５２
+map  901  id 0819  sub  0  ＥＧＧを手に入れました。
+map  901  id 0819  sub  0  『ＺＰＧ
+map  911  id 0823  sub  0  Ｋさん
+map  911  id 0823  sub  0  Ｇさん
+map  913  id 0900  sub  0  ？ＳＷＯＲＤを手に入れました。
+map  913  id 0900  sub  0  ？ＡＲＭＯＲを手に入れました。
+map  913  id 0900  sub  0  ？ＨＥＬＭを手に入れました。
+map  940  id 0100  sub  0  「その時はＸボタンを押して
+map  940  id 0100  sub  0  ２．ＤＥＥＮ
+map  940  id 0100  sub  0  「序盤、Ｇスラッグの毒液に
+map  940  id 0100  sub  0  「ミントがＬＶ５で習得する
+map  940  id 0100  sub  0  １．Ａレンジ
+map  940  id 0100  sub  0  ２．Ｌレンジ
+map  940  id 0100  sub  0  ３．Ｚレンジ
+map  940  id 0100  sub  0  ４．Ｓレンジ
+map  940  id 0100  sub  0  　ＴＰは？」
+map  940  id 0100  sub  0  ２．ラリーＸ
+map  940  id 0100  sub  0  「トリニクス・Ｄ・モリスンの
+map  940  id 0100  sub  0  １．ハロルド・Ｄ・モリスン
+map  940  id 0100  sub  0  ２．エドワード・Ａ・モリスン
+map  940  id 0100  sub  0  ３．ミラルド・Ｄ・モリスン
+map  940  id 0100  sub  0  ４．エドワード・Ｄ・モリスン
+map  965  id 0C08  sub  0  『Ｆ２１
+map  974  id 0C20  sub  0  ｔｏｄ２＝１７０にするっぺ
+map  974  id 0C20  sub  0  ｔｏｄ２を１５０にしたさ
+map 1024  id 0C5D  sub  0  　　　ＲＥＡＤＹ　ＧＯ！　　　
+map 1024  id 0C5D  sub  0  ＫＮＯＣＫ　ＤＯＷＮ　　　　　
+map 1024  id 0C5D  sub  0  　　　　ＴＨＥ　ＭＯＮＳＴＥＲ
+map 1024  id 0C5D  sub  0  ＫＮＯＣＫ　ＤＯＷＮ　　　　
+map 1024  id 0C5D  sub  0  Ｐｅｒｆｅｃｔ　Ｇａｍｅ！
+map 1024  id 0C5D  sub  0  　ＣＤが出てるんだってね」
+map 1024  id 0C5D  sub  0  　飾ってくれるのはＤＥＥＮ！
+map 1024  id 0C5D  sub  0  　聞かせてくれたＤＥＥＮに
+map 1134  id 0C71  sub  0  『Ｆ１６

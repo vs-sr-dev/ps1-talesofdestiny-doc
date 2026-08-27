@@ -1,0 +1,95 @@
+Development text left in the shipping script
+===========================================
+
+The map archive holds 538,900 Shift-JIS strings across 1,311 of its 1,315
+extents. 203 of them contain full-width Latin letters, which Japanese prose
+does not use; most are legitimate (floor labels, shop names), but 37 name a
+variable called 'tod2' and read as developer test menus.
+
+-- every string mentioning tod2 --
+map   10  id 0600  sub  0  ｔｏｄ２を８０に変更
+map   10  id 0600  sub  0  ｔｏｄ２を６０に変更
+map   19  id 0609  sub  0  ｔｏｄ２＝
+map   25  id 060F  sub  0  ｔｏｄ２を１５４０へ
+map   25  id 060F  sub  0  ｔｏｄ２を１６０１へ
+map   25  id 060F  sub  0  ｔｏｄ２を１１００へ
+map   25  id 060F  sub  0  ｔｏｄ２＝１１４０
+map  113  id 0325  sub  0  　ｔｏｄ２＝４００
+map  113  id 0325  sub  0  　ｔｏｄ２＝４４０
+map  177  id 039F  sub  0  ｔｏｄ２＝１９７１
+map  212  id 03E4  sub  0  ｔｏｄ２＝２０５０
+map  292  id 0A54  sub  0  ｔｏｄ２＝３０６０
+map  292  id 0A54  sub  0  ｔｏｄ２＝３０５０
+map  382  id 0333  sub  0  ｔｏｄ２＝１７０
+map  382  id 0333  sub  0  ｔｏｄ２＝１５０
+map  400  id 0519  sub  0  ｔｏｄ２＝１７００
+map  455  id 056F  sub  0  ｔｏｄ２＝１１４５
+map  478  id 0400  sub  0  ｔｏｄ２＝２６０
+map  489  id 0404  sub  0  ｔｏｄ２＝６９８
+map  489  id 0404  sub  0  ｔｏｄ２＝２８０
+map  519  id 0429  sub  0  ｔｏｄ２＝６１０
+map  521  id 0425  sub  0  ｔｏｄ２＝３００
+map  521  id 0425  sub  0  ｔｏｄ２＝３３０
+map  521  id 0425  sub  0  ｔｏｄ２＝１５６０
+map  549  id 0447  sub  0  ｔｏｄ２を７６０に変更
+map  596  id 0476  sub  0  ｔｏｄ２＝１２００
+map  612  id 0485  sub  0  ｔｏｄ２＝９００
+map  660  id 04B4  sub  0  ｔｏｄ２＝１７４０
+map  700  id 021A  sub  0  ｔｏｄ２＝２５５
+map  700  id 021A  sub  0  ｔｏｄ２＝１６６０
+map  849  id 0706  sub  0  ｔｏｄ２＝１０００
+map  859  id 0707  sub  0  ｔｏｄ２：０
+map  859  id 0707  sub  0  ｔｏｄ２：９５０
+map  877  id 0801  sub  0  『ｔｏｄ２＝７４１
+map  879  id 0803  sub  0  ｔｏｄ２＝２２００
+map  974  id 0C20  sub  0  ｔｏｄ２＝１７０にするっぺ
+map  974  id 0C20  sub  0  ｔｏｄ２を１５０にしたさ
+
+-- the scene-select menu in map 974 (id 0C20) --
+  sub  0 + 68655  シャワー室
+  sub  0 + 68676  作戦会議室
+  sub  0 + 68687  モンスター襲来
+  sub  0 + 68702  助手、目覚める
+  sub  0 + 68717  レンズ回収業務
+  sub  0 + 68732  前の日の晩
+  sub  0 + 68743  レンズ砲発射
+  sub  0 + 68756  ウソエンディング
+  sub  0 + 68773  ｔｏｄ２＝１７０にするっぺ
+  sub  0 + 68800  チェックルーチン作動
+  sub  0 + 68821  ｔｏｄ２を１５０にしたさ
+  sub  0 + 68850  「日記みたいだ」
+
+-- the ship-state menu in map 859 (id 0707) --
+  sub  0 + 14351  ｔｏｄ２：０
+  sub  0 + 14364  水門を閉じます
+  sub  0 + 14379  船は自由移動になりました
+  sub  0 + 14404  ｔｏｄ２：９５０
+  sub  0 + 14421  水門を開きます
+  sub  0 + 14436  船は自動移動になりました
+  sub  0 + 14461  水門を閉じます
+  sub  0 + 14476  自動移動では船は貫通します。
+  sub  0 + 14505  水門を開きます
+  sub  0 + 14520  現状では船頭さんに
+  sub  0 + 14539  話かけてね
+  sub  0 + 14550  旧自由移動です
+  sub  0 + 14565  船に乗りますか？
+  sub  0 + 14583  では出発
+  sub  0 + 14593  船に乗りません
+  sub  0 + 14608  船頭さん
+  sub  0 + 14617  「船に乗りたいのかい？」
+
+
+-- flag references left in dialogue --
+map   11  id 0601  sub  0  『Ｆ−２７
+map   26  id 0610  sub  0  『Ｆ４８
+map  523  id 042B  sub  0  『Ｆ０７
+map  529  id 0431  sub  0  『Ｆマート百貨店』
+map  714  id 0234  sub  0  『Ｆ３３
+map  879  id 0803  sub  0  『Ｆ３８
+map  889  id 080D  sub  0  『Ｆ２４
+map  889  id 080D  sub  0  『Ｆ１７
+map  901  id 0819  sub  0  『Ｆ１１
+map  901  id 0819  sub  0  『Ｆ２６
+map  901  id 0819  sub  0  『Ｆ５２
+map  965  id 0C08  sub  0  『Ｆ２１
+map 1134  id 0C71  sub  0  『Ｆ１６

@@ -1,0 +1,183 @@
+entry pc0    0x80151010
+gp0          0x00000000
+text va      0x800A0000 .. 0x801B9800 (1,153,024 bytes)
+data va      0x00000000 (0)
+bss va       0x801FFFF0 (0)
+sp           0x00000000 (0)
+region       'Sony Computer Entertainment Inc. for Japan area'
+80150D4C  00004021  addu    t0, zero, zero
+80150D50  24030FEF  addiu   v1, zero, 4079
+80150D54  00E81021  addu    v0, a3, t0
+80150D58  A0400000  sb      zero, 0(v0)
+80150D5C  25080001  addiu   t0, t0, 1
+80150D60  0103102A  slt     v0, t0, v1
+80150D64  1440FFFC  bne     v0, zero, 0x80150D58
+80150D68  00E81021  addu    v0, a3, t0
+80150D6C  00004021  addu    t0, zero, zero
+80150D70  00E01821  addu    v1, a3, zero
+80150D74  A0680000  sb      t0, 0(v1)
+80150D78  24630001  addiu   v1, v1, 1
+80150D7C  A0600000  sb      zero, 0(v1)
+80150D80  24630001  addiu   v1, v1, 1
+80150D84  A0680000  sb      t0, 0(v1)
+80150D88  24630001  addiu   v1, v1, 1
+80150D8C  A0600000  sb      zero, 0(v1)
+80150D90  24630001  addiu   v1, v1, 1
+80150D94  A0680000  sb      t0, 0(v1)
+80150D98  24630001  addiu   v1, v1, 1
+80150D9C  A0600000  sb      zero, 0(v1)
+80150DA0  24630001  addiu   v1, v1, 1
+80150DA4  A0680000  sb      t0, 0(v1)
+80150DA8  24630001  addiu   v1, v1, 1
+80150DAC  A0600000  sb      zero, 0(v1)
+80150DB0  25080001  addiu   t0, t0, 1
+80150DB4  29020100  slti    v0, t0, 256
+80150DB8  1440FFEE  bne     v0, zero, 0x80150D74
+80150DBC  24630001  addiu   v1, v1, 1
+80150DC0  00004021  addu    t0, zero, zero
+80150DC4  240900FF  addiu   t1, zero, 255
+80150DC8  24E30800  addiu   v1, a3, 2048
+80150DCC  A0680000  sb      t0, 0(v1)
+80150DD0  24630001  addiu   v1, v1, 1
+80150DD4  A0690000  sb      t1, 0(v1)
+80150DD8  24630001  addiu   v1, v1, 1
+80150DDC  A0680000  sb      t0, 0(v1)
+80150DE0  24630001  addiu   v1, v1, 1
+80150DE4  A0690000  sb      t1, 0(v1)
+80150DE8  24630001  addiu   v1, v1, 1
+80150DEC  A0680000  sb      t0, 0(v1)
+80150DF0  24630001  addiu   v1, v1, 1
+80150DF4  A0690000  sb      t1, 0(v1)
+80150DF8  24630001  addiu   v1, v1, 1
+80150DFC  A0680000  sb      t0, 0(v1)
+80150E00  25080001  addiu   t0, t0, 1
+80150E04  29020100  slti    v0, t0, 256
+80150E08  1440FFF0  bne     v0, zero, 0x80150DCC
+80150E0C  24630001  addiu   v1, v1, 1
+80150E10  24021000  addiu   v0, zero, 4096
+80150E14  244AFFEF  addiu   t2, v0, -17
+80150E18  00006821  addu    t5, zero, zero
+80150E1C  00A6102B  sltu    v0, a1, a2
+80150E20  1040004B  beq     v0, zero, 0x80150F50
+80150E24  000D1042  srl     v0, t5, 1
+80150E28  00406821  addu    t5, v0, zero
+80150E2C  30420100  andi    v0, v0, 0x0100
+80150E30  14400005  bne     v0, zero, 0x80150E48
+80150E34  31A20001  andi    v0, t5, 0x0001
+80150E38  90A20000  lbu     v0, 0(a1)
+80150E3C  24A50001  addiu   a1, a1, 1
+80150E40  344DFF00  ori     t5, v0, 0xFF00
+80150E44  31A20001  andi    v0, t5, 0x0001
+80150E48  10400009  beq     v0, zero, 0x80150E70
+80150E4C  00EA1021  addu    v0, a3, t2
+80150E50  90A30000  lbu     v1, 0(a1)
+80150E54  24A50001  addiu   a1, a1, 1
+80150E58  254A0001  addiu   t2, t2, 1
+80150E5C  314A0FFF  andi    t2, t2, 0x0FFF
+80150E60  A0430000  sb      v1, 0(v0)
+80150E64  A0830000  sb      v1, 0(a0)
+80150E68  08054387  j       0x80150E1C
+80150E6C  24840001  addiu   a0, a0, 1
+80150E70  90A90000  lbu     t1, 0(a1)
+80150E74  24A50001  addiu   a1, a1, 1
+80150E78  90A30000  lbu     v1, 0(a1)
+80150E7C  24A50001  addiu   a1, a1, 1
+80150E80  306200F0  andi    v0, v1, 0x00F0
+80150E84  00021100  sll     v0, v0, 4
+80150E88  01225825  or      t3, t1, v0
+80150E8C  3062000F  andi    v0, v1, 0x000F
+80150E90  244C0002  addiu   t4, v0, 2
+80150E94  2D820011  sltiu   v0, t4, 17
+80150E98  10400014  beq     v0, zero, 0x80150EEC
+80150F58  27BDEFD0  addiu   sp, sp, -4144
+80150F5C  00804021  addu    t0, a0, zero
+80150F60  00A03821  addu    a3, a1, zero
+80150F64  AFBF1028  sw      ra, 4136(sp)
+80150F68  90E20002  lbu     v0, 2(a3)
+80150F6C  90E40001  lbu     a0, 1(a3)
+80150F70  90E30003  lbu     v1, 3(a3)
+80150F74  00021200  sll     v0, v0, 8
+80150F78  00822021  addu    a0, a0, v0
+80150F7C  00031C00  sll     v1, v1, 16
+80150F80  00832021  addu    a0, a0, v1
+80150F84  90E20004  lbu     v0, 4(a3)
+80150F88  90E30000  lbu     v1, 0(a3)
+80150F8C  00021600  sll     v0, v0, 24
+80150F90  14600005  bne     v1, zero, 0x80150FA8
+80150F94  00823021  addu    a2, a0, v0
+80150F98  0C054583  jal     0x8015160C
+80150F9C  01002021  addu    a0, t0, zero
+80150FA0  080543FE  j       0x80150FF8
+80150FA4  00001021  addu    v0, zero, zero
+80150FA8  24020001  addiu   v0, zero, 1
+80150FAC  14620009  bne     v1, v0, 0x80150FD4
+80150FB0  24020003  addiu   v0, zero, 3
+80150FB4  01002021  addu    a0, t0, zero
+80150FB8  24E50009  addiu   a1, a3, 9
+80150FBC  24C60009  addiu   a2, a2, 9
+80150FC0  00E63021  addu    a2, a3, a2
+80150FC4  0C0542EC  jal     0x80150BB0
+80150FC8  27A70010  addiu   a3, sp, 16
+80150FCC  080543FE  j       0x80150FF8
+80150FD0  00001021  addu    v0, zero, zero
+80150FD4  14620008  bne     v1, v0, 0x80150FF8
+80150FD8  2402FFFF  addiu   v0, zero, -1
+80150FDC  01002021  addu    a0, t0, zero
+80150FE0  24E50009  addiu   a1, a3, 9
+80150FE4  24C60009  addiu   a2, a2, 9
+80150FE8  00E63021  addu    a2, a3, a2
+80150FEC  0C054353  jal     0x80150D4C
+80150FF0  27A70010  addiu   a3, sp, 16
+80150FF4  00001021  addu    v0, zero, zero
+80150FF8  8FBF1028  lw      ra, 4136(sp)
+80150FFC  27BD1030  addiu   sp, sp, 4144
+80151000  03E00008  jr      ra
+80151004  00000000  nop
+8014FAC4  27BDFFD8  addiu   sp, sp, -40
+8014FAC8  00803021  addu    a2, a0, zero
+8014FACC  AFB1001C  sw      s1, 28(sp)
+8014FAD0  00A08821  addu    s1, a1, zero
+8014FAD4  3C048019  lui     a0, 0x8019
+8014FAD8  8C832E44  lw      v1, 11844(a0)
+8014FADC  2402FFFF  addiu   v0, zero, -1
+8014FAE0  AFBF0020  sw      ra, 32(sp)
+8014FAE4  10620036  beq     v1, v0, 0x8014FBC0
+8014FAE8  AFB00018  sw      s0, 24(sp)
+8014FAEC  3C028019  lui     v0, 0x8019
+8014FAF0  2442622C  addiu   v0, v0, 25132
+8014FAF4  000618C0  sll     v1, a2, 3
+8014FAF8  00628021  addu    s0, v1, v0
+8014FAFC  24842E44  addiu   a0, a0, 11844
+8014FB00  00802821  addu    a1, a0, zero
+8014FB04  00003021  addu    a2, zero, zero
+8014FB08  8CA30000  lw      v1, 0(a1)
+8014FB0C  240206A4  addiu   v0, zero, 1700
+8014FB10  14620026  bne     v1, v0, 0x8014FBAC
+8014FB14  2402FFFF  addiu   v0, zero, -1
+8014FB18  8CA20008  lw      v0, 8(a1)
+8014FB1C  00000000  nop
+8014FB20  10400020  beq     v0, zero, 0x8014FBA4
+8014FB24  2484000C  addiu   a0, a0, 12
+8014FB28  0C0571D3  jal     0x8015C74C
+8014FB2C  00C42021  addu    a0, a2, a0
+8014FB30  8E040000  lw      a0, 0(s0)
+8014FB34  27A50010  addiu   a1, sp, 16
+8014FB38  000422C2  srl     a0, a0, 11
+8014FB3C  0C057192  jal     0x8015C648
+8014FB40  00442021  addu    a0, v0, a0
+8014FB44  2402FF00  addiu   v0, zero, -256
+8014FB48  01024024  and     t0, t0, v0
+8014FB4C  3C03FFFF  lui     v1, 0xFFFF
+8014FB50  346300FF  ori     v1, v1, 0x00FF
+8014FB54  3C06FF00  lui     a2, 0xFF00
+8014FB58  34C6FFFF  ori     a2, a2, 0xFFFF
+8014FB5C  240406A4  addiu   a0, zero, 1700
+8014FB60  02202821  addu    a1, s1, zero
+8014FB64  93A20010  lbu     v0, 16(sp)
+8014FB68  8E070004  lw      a3, 4(s0)
+8014FB6C  01024025  or      t0, t0, v0
+8014FB70  93A20011  lbu     v0, 17(sp)
+8014FB74  01034024  and     t0, t0, v1
+8014FB78  00021200  sll     v0, v0, 8
+8014FB7C  01024025  or      t0, t0, v0
+8014FB80  01064024  and     t0, t0, a2

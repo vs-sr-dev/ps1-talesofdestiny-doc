@@ -1,0 +1,26 @@
+== PIC/BF.D ==
+BF.D: not a container (block m3 13667->33312)
+== PIC/FACE.D ==
+variant A, 10 members
+member           offset       size  contents
+0                    44       6776  block m3 6767->25504
+1                  6820       5208  block m3 5198->25504 +1
+== PIC/FACE2.D ==
+variant A, 10 members
+member           offset       size  contents
+0                    44       6740  block m3 6728->25504 +3
+1                  6784       5872  block m3 5863->25504
+== PIC/I.D ==
+variant A, 458 members
+member           offset       size  contents
+0                  1836        244  block m3 235->576
+1                  2080        340  block m3 329->576 +2
+== PIC/MC.D ==
+MC.D: not a container (block m3 106595->256576)
+== PIC/RC.D ==
+RC.D: not a container (block m3 11873->33120)
+== PIC/WM.D ==
+variant A, 6 members
+member           offset       size  contents
+0                    28       5672  block m3 5663->15456
+1                  5700       3200  block m3 3191->8480

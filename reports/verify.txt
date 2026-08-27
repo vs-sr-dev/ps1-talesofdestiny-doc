@@ -1,0 +1,19 @@
+V.DAT     1349 extents         0 blocks      0.0s
+M.DAT     1315 extents      3955 blocks     53.4s
+E.DAT       38 extents       215 blocks     54.4s
+S.DAT       94 extents         0 blocks     54.4s
+B.DAT      339 extents      1981 blocks     55.9s
+PIC          7 files
+
+containers      5983 (max nesting depth 2)
+packed blocks   6638  method 1: 157, method 3: 6481
+empty members   0
+raw members     44512
+packed bytes    148,665,346
+unpacked bytes  464,839,924  (ratio 3.13x)
+mismatches      0
+elapsed         56.1s
+preloaded ring, cursor 4078  (the model)    25 of 147 method-1 blocks decode to a structure  {'unrecognised': 122, 'container': 10, 'TIM': 15}
+preloaded ring, cursor 4079                 11 of 147 method-1 blocks decode to a structure  {'unrecognised': 136, 'TIM': 11}
+zeroed ring, cursor 4078                    18 of 147 method-1 blocks decode to a structure  {'unrecognised': 129, 'container': 10, 'TIM': 8}
+zeroed ring, cursor 4079                     4 of 147 method-1 blocks decode to a structure  {'unrecognised': 143, 'TIM': 4}

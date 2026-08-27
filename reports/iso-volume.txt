@@ -1,0 +1,55 @@
+image           Tales of Destiny (Japan) (Track 1).bin
+raw sectors     220544
+descriptors     [(16, 1, 'CD001'), (17, 255, 'CD001')]
+system id       'PLAYSTATION'
+volume id       'TALESOFDESTINY'
+volume blocks   238737 (488,933,376 bytes of Form-1 data)
+block size      2048
+path table      58 bytes, L at LBA 18, M at LBA 20
+volume set      ''
+publisher       'NAMCO LIMITED'
+preparer        'NAMCO LIMITED'
+application     'PLAYSTATION'
+copyright file  ''
+abstract file   ''
+created         '1997120201030000\x00'
+modified        '0000000000000000\x00'
+expires         '0000000000000000\x00'
+effective       '0000000000000000\x00'
+XA signature    b'CD-XA001'
+root            LBA 22 size 2048
+DIR       23                1997-12-02 01:03:00 GMT+0  DAT
+          24     4,466,688  1997-12-02 01:03:00 GMT+0  DAT/B.DAT;1   attr=0D55[MODE2] owner=0:0
+        2205       189,400  1997-12-02 01:03:00 GMT+0  DAT/BVB.D;1   attr=0D55[MODE2] owner=0:0
+        2298           705  1997-12-02 01:03:00 GMT+0  DAT/DBG.D;1   attr=0D55[MODE2] owner=0:0
+        2299     2,152,448  1997-12-02 01:03:00 GMT+0  DAT/E.DAT;1   attr=0D55[MODE2] owner=0:0
+        3350           797  1997-12-02 01:03:00 GMT+0  DAT/INI.D;1   attr=0D55[MODE2] owner=0:0
+        3351        73,160  1997-12-02 01:03:00 GMT+0  DAT/KAISEN.BIN;1   attr=0D55[MODE2] owner=0:0
+        3387   137,869,312  1997-12-02 01:03:00 GMT+0  DAT/M.DAT;1   attr=0D55[MODE2] owner=0:0
+       70706     1,120,256  1997-12-02 01:03:00 GMT+0  DAT/S.DAT;1   attr=0D55[MODE2] owner=0:0
+       71253       438,112  1997-12-02 01:03:00 GMT+0  DAT/TALE.VB;1   attr=0D55[MODE2] owner=0:0
+       71467        63,420  1997-12-02 01:03:00 GMT+0  DAT/TKM.BIN;1   attr=0D55[MODE2] owner=0:0
+       71498    22,157,312  1997-12-02 01:03:00 GMT+0  DAT/V.DAT;1   attr=0D55[MODE2] owner=0:0
+      220694    36,952,064  1997-12-02 01:03:00 GMT+0  DUMMY3M.DA;1   attr=4555[INTERLEAVED] owner=0:0
+DIR    82317                1997-12-02 01:03:00 GMT+0  MOVIE
+       82318    15,294,464  1997-12-02 01:03:00 GMT+0  MOVIE/EVA.STR;1   attr=2555[FORM2] owner=0:0
+       89786    18,890,752  1997-12-02 01:03:00 GMT+0  MOVIE/EVB.STR;1   attr=2555[FORM2] owner=0:0
+       99010    12,042,240  1997-12-02 01:03:00 GMT+0  MOVIE/EVC.STR;1   attr=2555[FORM2] owner=0:0
+      104890     1,589,248  1997-12-02 01:03:00 GMT+0  MOVIE/LOGO.STR;1   attr=2555[FORM2] owner=0:0
+      105666     1,740,800  1997-12-02 01:03:00 GMT+0  MOVIE/NAMCO.STR;1   attr=0D55[MODE2] owner=0:0
+      106516    37,666,816  1997-12-02 01:03:00 GMT+0  MOVIE/OP.STR;1   attr=2555[FORM2] owner=0:0
+DIR   124908                1997-12-02 01:03:00 GMT+0  PIC
+      124909        13,676  1997-12-02 01:03:00 GMT+0  PIC/BF.D;1   attr=0D55[MODE2] owner=0:0
+      124916        57,792  1997-12-02 01:03:00 GMT+0  PIC/FACE.D;1   attr=0D55[MODE2] owner=0:0
+      124945        65,596  1997-12-02 01:03:00 GMT+0  PIC/FACE2.D;1   attr=0D55[MODE2] owner=0:0
+      124978       109,904  1997-12-02 01:03:00 GMT+0  PIC/I.D;1   attr=0D55[MODE2] owner=0:0
+      125032       106,604  1997-12-02 01:03:00 GMT+0  PIC/MC.D;1   attr=0D55[MODE2] owner=0:0
+      125085        11,882  1997-12-02 01:03:00 GMT+0  PIC/RC.D;1   attr=0D55[MODE2] owner=0:0
+      125091        18,356  1997-12-02 01:03:00 GMT+0  PIC/WM.D;1   attr=0D55[MODE2] owner=0:0
+      219829     1,155,072  1997-12-02 01:03:00 GMT+0  SLPS_011.00;1   attr=0D55[MODE2] owner=0:0
+      220393            67  1997-12-02 01:03:00 GMT+0  SYSTEM.CNF;1   attr=0D55[MODE2] owner=0:0
+DIR   125100                1997-12-02 01:03:00 GMT+0  XA
+      125101    49,086,464  1997-12-02 01:03:00 GMT+0  XA/S.XA;1   attr=2555[FORM2] owner=0:0
+      149069   144,916,480  1997-12-02 01:03:00 GMT+0  XA/T.XA;1   attr=2555[FORM2] owner=0:0
+
+29 files, 488,249,887 bytes

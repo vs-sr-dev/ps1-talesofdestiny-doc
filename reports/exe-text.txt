@@ -1,0 +1,195 @@
+== Shift-JIS to internal code map, 0x801807FC ==
+   39 entries.  Full-width punctuation folds onto the single-byte
+   JIS X 0201 codes the text engine actually stores.
+   8140 　 -> 20   8141 、 -> A4   8142 。 -> A1   8143 ， -> 2C
+   8144 ． -> 2E   8145 ・ -> A5   8146 ： -> 3A   8147 ； -> 3B
+   8148 ？ -> 3F   8149 ！ -> 21   814F ＾ -> 5E   8151 ＿ -> 5F
+   815B ー -> B0   815E ／ -> 2F   815F ＼ -> 5C   8150 ￣ -> 7E
+   8162 ｜ -> 7C   8165 ‘ -> 60   8166 ’ -> 27   8169 （ -> 28
+   816A ） -> 29   8168 ” -> 22   816D ［ -> 5B   816E ］ -> 5D
+   816F ｛ -> 7B   8170 ｝ -> 7D   8175 「 -> A2   8176 」 -> A3
+   817B ＋ -> 2B   817C − -> 2D   8181 ＝ -> 3D   8183 ＜ -> 3C
+   8184 ＞ -> 3E   8190 ＄ -> 24   8193 ％ -> 25   8194 ＃ -> 23
+   8195 ＆ -> 26   8196 ＊ -> 2A   8197 ＠ -> 40
+
+== technique-name kanji inventory, 0x8018089C ==
+   74 glyphs, ending at 0x80180930
+   魔神剣飛燕連脚爪竜牙斬虎破烈空真獅子戦吼閃裂鳳凰天駆爆炎陣王撃波紅蓮昇殺劇舞荒未
+   定皇翔翼人闇風陽豪疾雹雨刃改剛雷猛襲迅死滅弓友情譜面演奏超断熱旋拳十
+
+== sound test name list, 0x8018CFC8 ==
+     0  *
+     1  Preview edition
+     2  Unfinished world
+     3  Crooked sight
+     4  A snowscape
+     5  A kingdom
+     6  The laughter of children
+     7  Despair
+     8  A Caged life
+     9  Green hill
+    10  Go on a cruise
+    11  Solemn castle
+    12  Bare its fangs
+    13  Surprise attack!
+    14  Nightmare
+    15  Perfidious act
+    16  Sink into vice
+    17  Victory!
+    18  The remains
+    19  A limestone cave
+    20  Clock tower
+    21  A sanctuary
+    22  A peaceful day
+    23  White labyrinth
+    24  Fill of fire
+    25  Dead factory
+    26  Aerial city
+    27  Dead or alive
+    28  Wonder boy -Who are you?-
+    29  I'm a champion!
+    30  Mysteries night
+    31  I feel so happy today
+    32  Conceal one's sorrow
+    33  The storm and stress
+    34  A submarine remains
+    35  A botanical garden
+    36  A reinforced concrete
+    37  A research scholar
+    38  It's pure fiction
+    39  Thanks a million
+    40  Water garden
+    41  Lime light night
+    42  White kingdom
+    43  Will you dance with me?
+    44  Good luck!
+    45  Walking to tomorrow
+    46  Silent night
+    47  Hello again
+    48  Heat wave
+    49  Lion  -Irony of fate-
+    50  Relentless assault
+    51  Blue dragon
+    52  Rebel against destiny
+    53  Happy come come
+    54  Game over
+    55  Tales of Destiny
+    56  Endless dream
+    57  Day break
+    58  Rush!
+    59  Port town
+    60  Over the rainbow
+    61  Passion
+    62  Level up!
+    63  A happy home
+    64  Berglandt
+    65  Cry for the moon
+    66  Unsophisticated
+    67  Rise again
+    68  Idle fears
+    69  Danger signal
+    70  Trickster
+    71  Crown of croses
+    72  Memory "Yume de aruyouni"
+    73  Puppy love
+    74  Leaving for the future
+    75   namco 1
+    76   namco 2
+    77   namco 3
+    78   namco 4
+    79   namco 5
+    80   namco 6
+    81   namco 7
+    82   namco 8
+    83   namco 9
+    84   namco 10
+    85   namco 11
+    86  Missing you
+    87  Fatalism
+    88  Ancestral recall
+    89  Invisible hand
+    90  Imposing visage
+    91  Naval Forces
+    92  Fin
+    93  BattleEnd
+    94  MoveCursor
+    95  Decision
+    96  Swing1:Zashu
+    97  Swing2:Shubaba!
+    98  Thrust1:Doshu
+    99  Thrust2:Dobyushu!
+   100  Blow1:Bishi
+   101  Blow2:Dosu
+   102  Defence:Kiin
+   103  Bomb1:Boan!
+   104  Bomb2:Zugaan!
+   105  Bomb3:Dogagagagaaaan!
+   106  Explode:Don!Dogaaaaa!
+   107  Fire:Boaaa
+   108  Storm:Zaaaaaa
+   109  Wind:Fuuuu!
+   110  Ice:Pikiiin
+   111  Majinken:BAshuu
+   112  Majinken:Jyuba!
+   113  Lightning:Bachi
+   114  ShaveG:Garigarigari!
+   115  RockAtack:Gan!
+   116  CrushGlass:kacha-n
+   117  Walter:za-
+   118  LightBelt:hyuiiiii
+   119  Storm:Bufou!
+   120  Bow:hyun!
+   121  lazer:biii-
+   122  Enargy:Hyuuuu
+   123  StatusChange:Puwapuwa
+   124  HpRecovery:Kirakira
+   125  Swing:Bun
+   126  Thrust:Syu
+   127  Defence:Kasu
+   128  Keikoku:Boo
+   129  Door:Batan
+   130  Kaidan:Zazzazza
+   131  Keikoku:Uiiiin
+   132  Sindou:Gogogogogo
+   133  Hatch:Gasyun!
+   134  TrapCancel:Booon
+   135  Short:BachiBachi
+   136  Energy:BachiBachi
+   137  Berglandt:Hyuhyuhyu
+   138  Berglandt:Basyuu!
+   139  DoorKnock:KonKon
+   140  *(DoorKnock:DonDon)
+   141  SwitchChange:Kachi!
+   142  Kibako:Giii
+   143  Curtain:Syu
+   144  WindowOpen:Boon
+   145  DansaRakka:GataGata!
+   146  Dog:One!
+   147  Cat:Nya-
+   148  Cock:Koke!
+   149  Seagull:Kue-Kue-
+   150  Frog:Geroge-ro
+   151  LittleBird:ChunChun
+   152  Oul:Ho-uHo-u
+   153  Lion:Gaooon!
+   154  Creek:Chirochiro
+   155  DropWalter:Pichon!
+   156  DropSurfaceWalter:Basshaan!
+   157  Flutter:BassaBassa
+   158  HandCrap:PachiPachi!
+   159  Shout:Uaaaaa!
+   160  Sleep:Zzzz
+   161  *(SnowWalk:KyuKyu)
+   162  WalterWalk:PichoPicho
+   163  Walter:BashaBasha
+   164  Music1:Jyararan
+   165  Music2:Jaran...
+   166  Money:Chariin
+   167  Maguma:Gopo!
+   168  Speciality:Goaaa!
+   169  Marian:Ha---
+   170  Magic:Piki-n!
+   171  ItemGet
+   172  LevelUp
+   173  ?
+

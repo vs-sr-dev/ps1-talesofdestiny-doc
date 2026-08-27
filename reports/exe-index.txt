@@ -1,0 +1,51 @@
+== file registry, 0x80192E44 ==
+   the loader turns an id into a path: 1000-1099 become \PIC\%s.D;1,
+   1100-1299 become \DAT\%s;1, everything else is used literally.
+   id     name                   record
+   0      \DAT\B.DAT;1           0x800A4F74 0x00000000 0x00000000
+   1000   MC                     0x801B947C 0x00000000 0x00000000
+   1001   I                      0x801B9478 0x00000000 0x00000000
+   1002   FACE                   0x801B9470 0x00000000 0x00000000
+   1003   FACE2                  0x801B9468 0x00000000 0x00000000
+   1005   RC                     0x801B9464 0x00000000 0x00000000
+   1006   WM                     0x801B9460 0x00000000 0x00000000
+   1007   BF                     0x801B945C 0x00000000 0x00000000
+   1100   TALE.VB                0x801B9454 0x00000000 0x00000000
+   1101   BVB.D                  0x801B944C 0x00000000 0x00000000
+   1200   KAISEN.BIN             0x800A4F68 0x00000000 0x00000000
+   1201   TKM.BIN                0x801B9444 0x00000000 0x00000000
+   1250   INI.D                  0x801B943C 0x00000000 0x00000000
+   1251   DBG.D                  0x801B9434 0x00000000 0x00000000
+   1300   \DAT\E.DAT;1           0x800A4F58 0x00000000 0x00000000
+   1400   \DAT\S.DAT;1           0x800A4F48 0x00000000 0x00000000
+   1500   \DAT\V.DAT;1           0x800A4F38 0x00000000 0x00000000
+   1600   \XA\T.XA;1             0x800A4F2C 0x00000000 0x00000000
+   1650   \XA\S.XA;1             0x800A4F20 0x00000000 0x00000000
+   1700   \DAT\M.DAT;1           0x800A4F10 0x00000000 0x00000000
+   1800   \MOVIE\LOGO.STR;1      0x800A4EFC 0x00000000 0x00000000
+   1801   \MOVIE\NAMCO.STR;1     0x800A4EE8 0x00000000 0x00000000
+   1802   \MOVIE\EVA.STR;1       0x800A4ED4 0x00000000 0x00000000
+   1803   \MOVIE\EVB.STR;1       0x800A4EC0 0x00000000 0x00000000
+   1804   \MOVIE\EVC.STR;1       0x800A4EAC 0x00000000 0x00000000
+   1805   \MOVIE\OP.STR;1        0x800A4E9C 0x00000000 0x00000000
+   -1     (end)
+
+V.DAT  table 0x80193804  1349 entries
+  archive 22,157,312 bytes, 22157312 referenced (100.00%), 0 unreferenced region(s)
+
+M.DAT  table 0x8019622C  1315 entries
+  archive 137,869,312 bytes, 137869312 referenced (100.00%), 0 unreferenced region(s)
+  134 entries share 39 extents
+
+E.DAT  table 0x80198B44  38 entries
+  archive 2,152,448 bytes, 2152448 referenced (100.00%), 0 unreferenced region(s)
+
+S.DAT  table 0x80198C74  94 entries
+  archive 1,120,256 bytes, 1120256 referenced (100.00%), 0 unreferenced region(s)
+
+B.DAT  table 0x8019923C  339 entries
+  archive 4,466,688 bytes, 4466688 referenced (100.00%), 0 unreferenced region(s)
+
+map id array 0x80186C74: 1315 ids, 1315 distinct
+  by high byte: 00:2, 01:7, 02:159, 03:156, 04:198, 05:115, 06:90, 07:41, 08:37, 09:27, 0A:107, 0B:5, 0C:202, 0D:73, 0E:82, 0F:5, 10:9
+

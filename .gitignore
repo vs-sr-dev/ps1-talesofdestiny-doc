@@ -1,0 +1,23 @@
+# Never commit anything derived from the disc itself.
+*.bin
+*.cue
+*.iso
+*.img
+*.zip
+*.str
+*.xa
+*.vag
+*.vb
+*.seq
+*.tim
+*.png
+_work/
+iso/
+extracted/
+out/
+
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db

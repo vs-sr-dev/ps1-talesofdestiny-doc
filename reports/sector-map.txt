@@ -1,0 +1,53 @@
+track      Tales of Destiny (Japan) (Track 1).bin
+raw size   518,719,488 bytes, 220544 sectors
+
+-- system area (LBA 0-15) --
+   0  mode 2  sub DATA   2323 non-zero  000000000000000000000000000000000000000000000000000000000000000
+   1  mode 2  sub DATA   2323 non-zero  000000000000000000000000000000000000000000000000000000000000000
+   2  mode 2  sub DATA   2323 non-zero  000000000000000000000000000000000000000000000000000000000000000
+   3  mode 2  sub DATA   2323 non-zero  000000000000000000000000000000000000000000000000000000000000000
+   4  mode 2  sub DATA   2307 non-zero            Licensed  by          Sony Computer Entertainment Inc
+   5  mode 2  sub DATA   1612 non-zero  A............#..Q....-..........0.......... 9.. ........... 9.. 
+   6  mode 2  sub DATA   1642 non-zero  ;.......... Bk. <.......... Bk. <.......... Bk. =.......... Bk. 
+   7  mode 2  sub DATA   1645 non-zero  C.......... 9.. C.......... ... C.......... ... C.......... 9.. 
+   8  mode 2  sub DATA   1960 non-zero  K.......... ... L.......... ... M.......... ... N.......... ... 
+   9  mode 2  sub DATA   1646 non-zero  ..F...E.... ... ..E........ ... ........... ... ......G.... ... 
+  10  mode 2  sub DATA   1466 non-zero  ].......`.../...`.../...R.......R...........................b
+  11  mode 2  sub DATA   2055 non-zero  K.......K.......9.......9.......g.......g.......j.N.......n.e
+  12  mode 2  sub FORM2      0 non-zero  (empty)
+  13  mode 2  sub FORM2      0 non-zero  (empty)
+  14  mode 2  sub FORM2      0 non-zero  (empty)
+  15  mode 2  sub FORM2      0 non-zero  (empty)
+
+-- submode census --
+  submode 64  RT|FORM2|AUDIO              84203 sectors  (38.2%)
+  submode 08  DATA                        83890 sectors  (38.0%)
+  submode 48  RT|DATA                     34951 sectors  (15.8%)
+  submode 00  -                           16768 sectors  (7.6%)
+  submode 42  RT|VIDEO                      679 sectors  (0.3%)
+  submode 89  EOF|DATA|EOR                   31 sectors  (0.0%)
+  submode E4  EOF|RT|FORM2|AUDIO             14 sectors  (0.0%)
+  submode 20  FORM2                           4 sectors  (0.0%)
+  submode 80  EOF                             2 sectors  (0.0%)
+  submode 09  DATA|EOR                        1 sectors  (0.0%)
+  submode C8  EOF|RT|DATA                     1 sectors  (0.0%)
+  Form 1 136323, Form 2 84221 (38.2% of the track)
+
+-- XA file/channel pairs on Form 2 sectors --
+  file   0 channel   0  -                       4 sectors     0.0 s of stereo XA
+  file   1 channel   0  RT|AUDIO            11727 sectors    78.2 s of stereo XA
+  file   1 channel   1  RT|AUDIO            17013 sectors   113.4 s of stereo XA
+  file   1 channel   2  RT|AUDIO            11252 sectors    75.0 s of stereo XA
+  file   1 channel   3  RT|AUDIO             8845 sectors    59.0 s of stereo XA
+  file   1 channel   4  RT|AUDIO             8845 sectors    59.0 s of stereo XA
+  file   1 channel   5  RT|AUDIO             8845 sectors    59.0 s of stereo XA
+  file   1 channel   6  RT|AUDIO             8845 sectors    59.0 s of stereo XA
+  file   1 channel   7  RT|AUDIO             8845 sectors    59.0 s of stereo XA
+
+-- Form 1 / Form 2 runs --
+        16 ..    82324     82309  FORM1
+     89630 ..    89792       163  FORM1
+    105458 ..   106522      1065  FORM1
+    124908 ..   125100       193  FORM1
+    149069 ..   219828     70760  FORM2
+    219829 ..   220543       715  FORM1

@@ -1,0 +1,88 @@
+
+-- the DEBUG.TXT switch ----------------------------------------------
+The startup path at 0x801502F4 asks the CD for \DEBUG.TXT;1 before it
+does anything else, and stores 8 into the word at 0x80174AD0 if the file
+is there and 4 if it is not.  Nothing else on the disc mentions the name.
+  \DEBUG.TXT;1 present on this disc: no
+
+-- the hole in the PIC id space --------------------------------------
+PIC ids in the registry: 1000, 1001, 1002, 1003, 1005, 1006, 1007
+missing: 1004  (seven .D files ship; the eighth slot was dropped)
+
+-- DBG.D — a debug save next to the real one -------------------------
+INI.D and DBG.D both decode to 2804 bytes and are byte-identical except
+in 270 places totalling 526 bytes.
+
+  given          family            INI.D    DBG.D
+  スタン            エルロン                142     3000
+  ルーティ           カトレット               434     3000
+  リオン            マグナス                712     3000
+  ウッドロウ          ケルヴィン               904     3000
+  フィリア           フィリス                647     3000
+  マリー            エージェント              493     3000
+  ジョニー           シデン                1304     3000
+  チェルシー          トーン                 213     3000
+  マイティ           コングマン              2935     3000
+  リリス            エルロン                649     3000
+
+  byte at +0x08:        INI.D 20, DBG.D 10
+  16 bytes at +0x94:    INI.D 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+                        DBG.D 01 02 05 04 06 07 03 08 09 0A 0B 0D 0E 0C 0F 10
+  — empty in the shipping template, fully populated in the debug one.
+
+-- KAISEN.BIN — the naval mini-game, with its profiler still in it ---
+73,160 bytes, a MIPS overlay linked at 0x80010000 — the same arena the map
+data uses. A 0x118-byte header of strings and pointers, then code.
+  +002C  'SCORE'
+  +0048  'BATTLE'
+  +0050  'START'
+  +0058  'NEXT'
+  +0060  'ENEMY'
+  +0068  'WIN'
+  +006C  'YOUR RANK :'
+  +0078  'SEAMAN'
+  +0080  'SERGENT'
+  +0088  'OFFICER'
+  +0090  'LIEUTENANT'
+  +009C  'CAPTAIN'
+  +00A4  'MAJOR'
+  +00AC  'COLONEL'
+  +00B4  'GENERAL'
+  +00BC  'MONKEY'
+  +00C4  'BROKEN'
+  +00E0  'PAUSE'
+  +0108  'sim:PICTURE.BIN'
+
+-- names the sound team left marked ----------------------------------
+    0  *
+   75   namco 1
+   76   namco 2
+   77   namco 3
+   78   namco 4
+   79   namco 5
+   80   namco 6
+   81   namco 7
+   82   namco 8
+   83   namco 9
+   84   namco 10
+   85   namco 11
+   92  Fin
+  140  *(DoorKnock:DonDon)
+  161  *(SnowWalk:KyuKyu)
+  173  ?
+
+-- seventeen bytes of the decoder dictionary are never initialised ---
+The method-3 decoder at 0x80150D4C builds its 4096-byte ring on the
+stack, clears indices 0..4078, fills 0..3839 with a synthetic table,
+and starts writing at 4079.  Indices 4079..4095 are left holding
+whatever the previous call left on the stack.  A block that referenced
+them would decode differently on every call; over 6,638 blocks on this
+disc, none does.
+
+-- filler ------------------------------------------------------------
+all-zero sectors in the data track: 154 of 220544 (0.07%)
+DUMMY3M.DA is declared at LBA 220694 for 36,952,064 bytes (18043 sectors).
+The data track ends at LBA 220543, so the whole extent lies outside it:
+LBA 220694 is exactly where track 2, the CD-DA audio track, starts after
+its 150-sector pre-gap, and 220694 + 18043 = 238737 is the volume size the PVD
+declares.  The pad file names the music track.

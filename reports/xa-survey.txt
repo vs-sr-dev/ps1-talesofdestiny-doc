@@ -1,0 +1,8 @@
+  coding 00  submode 00 -                         15682 sectors   mono 37.8 kHz 4 bit
+  coding 00  submode 80 EOF                           1 sectors   mono 37.8 kHz 4 bit
+  coding 01  submode 64 RT|FORM2|AUDIO             8282 sectors   mono 18.9 kHz 4 bit
+  coding 01  submode E4 EOF|RT|FORM2|AUDIO            3 sectors   mono 18.9 kHz 4 bit
+  3 distinct file/channel pairs
+  coding 01  submode 64 RT|FORM2|AUDIO            70752 sectors   mono 18.9 kHz 4 bit
+  coding 01  submode E4 EOF|RT|FORM2|AUDIO            8 sectors   mono 18.9 kHz 4 bit
+  8 distinct file/channel pairs

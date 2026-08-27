@@ -1,0 +1,39 @@
+track      Tales of Destiny (Japan) (Track 1).bin
+raw size   518,719,488 bytes, 220544 sectors
+
+-- per file, in disc order --
+file                lba  sectors        bytes  submodes
+--                   16        8               (directory records / gap)
+B.DAT                24     2181    4,466,688  08 DATA x2180, 89 EOF|DATA|EOR x1
+BVB.D              2205       93      189,400  08 DATA x92, 89 EOF|DATA|EOR x1
+DBG.D              2298        1          705  89 EOF|DATA|EOR x1
+E.DAT              2299     1051    2,152,448  08 DATA x1050, 89 EOF|DATA|EOR x1
+INI.D              3350        1          797  89 EOF|DATA|EOR x1
+KAISEN.BIN         3351       36       73,160  08 DATA x35, 89 EOF|DATA|EOR x1
+M.DAT              3387    67319  137,869,312  08 DATA x67318, 89 EOF|DATA|EOR x1
+S.DAT             70706      547    1,120,256  08 DATA x546, 89 EOF|DATA|EOR x1
+TALE.VB           71253      214      438,112  08 DATA x213, 89 EOF|DATA|EOR x1
+TKM.BIN           71467       31       63,420  08 DATA x30, 89 EOF|DATA|EOR x1
+V.DAT             71498    10819   22,157,312  08 DATA x10818, 89 EOF|DATA|EOR x1
+--                82317        1               (directory records / gap)
+EVA.STR           82318     7468   15,294,464  48 RT|DATA x6534, 64 RT|FORM2|AUDIO x914, 00 - x19, C8 EOF|RT|DATA x1
+EVB.STR           89786     9224   18,890,752  48 RT|DATA x7866, 64 RT|FORM2|AUDIO x1152, 00 - x205, E4 EOF|RT|FORM2|AUDIO x1
+EVC.STR           99010     5880   12,042,240  48 RT|DATA x4503, 64 RT|FORM2|AUDIO x734, 00 - x642, E4 EOF|RT|FORM2|AUDIO x1
+LOGO.STR         104890      776    1,589,248  42 RT|VIDEO x679, 64 RT|FORM2|AUDIO x71, 00 - x25, 80 EOF x1
+NAMCO.STR        105666      850    1,740,800  08 DATA x849, 89 EOF|DATA|EOR x1
+OP.STR           106516    18392   37,666,816  48 RT|DATA x16048, 64 RT|FORM2|AUDIO x2298, 00 - x45, E4 EOF|RT|FORM2|AUDIO x1
+--               124908        1               (directory records / gap)
+BF.D             124909        7       13,676  08 DATA x6, 89 EOF|DATA|EOR x1
+FACE.D           124916       29       57,792  08 DATA x28, 89 EOF|DATA|EOR x1
+FACE2.D          124945       33       65,596  08 DATA x32, 89 EOF|DATA|EOR x1
+I.D              124978       54      109,904  08 DATA x53, 89 EOF|DATA|EOR x1
+MC.D             125032       53      106,604  08 DATA x52, 89 EOF|DATA|EOR x1
+RC.D             125085        6       11,882  08 DATA x5, 89 EOF|DATA|EOR x1
+WM.D             125091        9       18,356  08 DATA x8, 89 EOF|DATA|EOR x1
+--               125100        1               (directory records / gap)
+S.XA             125101    23968   49,086,464  00 - x15682, 64 RT|FORM2|AUDIO x8282, E4 EOF|RT|FORM2|AUDIO x3, 80 EOF x1
+T.XA             149069    70760  144,916,480  64 RT|FORM2|AUDIO x70752, E4 EOF|RT|FORM2|AUDIO x8
+SLPS_011.00      219829      564    1,155,072  08 DATA x563, 89 EOF|DATA|EOR x1
+SYSTEM.CNF       220393        1           67  89 EOF|DATA|EOR x1
+DUMMY3M.DA       220694        -   36,952,064  extent lies beyond the end of the track
+--               220394      150               (post-gap before the audio track)
